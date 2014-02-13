@@ -32,11 +32,27 @@ voor een volledig werkend systeem:
 
 Eventueel ook installeren:
 
-* AutoHotkey; AutoHotkey.ahk:
-    #t::Run, C:\Tools\Console2\Console.exe -t "Powershell" -t "Git Bash", , %HOME%
-    #c::Run, C:\Tools\Console2\Console.exe -t "Powershell", , %HOME%
-    #v::Run, C:\Program Files (x86)\Vim\vim73\gvim.exe, , %HOME%
-    #s::Run, C:\Program Files\Sublime Text 2\sublime_text.exe, , %HOME%
+* AutoHotkey; AutoHotkey.ahk: 
+
+```
+#SingleInstance force
+
+; Shortcut keys
+#i::Run, "C:\Program Files\Internet Explorer\iexplore.exe", , %HOME%
+#b::Run, "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", , %HOME%
+#t::Run, "C:\Program Files\ConEmu\ConEmu64.exe", , %HOME%
+#v::Run, "C:\Program Files (x86)\Vim\vim74\gvim.exe", , %HOME%
+#s::Run, "C:\Program Files\Sublime Text 3\sublime_text.exe", , %HOME%
+#c::Run, "%windir%\system32\calc.exe", , %HOME%
+
+; remap Capslock to CTRL
+Capslock::Ctrl
++Capslock::Capslock
+
+; Right WIN-key => context-menu
+RWin::AppsKey
+```
+
 * F.lux
 * iTunes en iCloud
 * Spotify
